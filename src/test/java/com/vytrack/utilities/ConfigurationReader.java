@@ -1,0 +1,31 @@
+package com.vytrack.utilities;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+public class ConfigurationReader {
+
+    private static final Properties properties = new Properties();
+
+    static {
+        try {
+            //#2- We get the path and pass it into FileInputStream, to open the file
+            FileInputStream file = new FileInputStream("configuration.properties");
+            //#3- We load the opened file into properties object
+            properties.load(file);
+            //#5- close the file
+            file.close();
+
+        } catch (IOException e) {
+            System.out.println("Failed to load properties file");
+        }
+
+    }
+    //#4- We read from file
+    public static String getProperty(String keyWord){
+        return properties.getProperty(keyWord);
+    }
+
+
+}
