@@ -1,4 +1,4 @@
-@login
+@login @DEM-5
 Feature: As user I want to be able to login under different roles
   # this is used to write comments
   # Background - test pre-condition
@@ -6,7 +6,7 @@ Feature: As user I want to be able to login under different roles
   Background: common steps
     Given user is on the login page
 
-  @smoke
+  @smoke @TEST_DEM-2
   Scenario: Login as sales manager
     When user logs in
     Then user should see dashboard page
