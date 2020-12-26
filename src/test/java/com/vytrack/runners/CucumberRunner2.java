@@ -9,19 +9,20 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         plugin = {
+                "html:target/cucumber.html",
                 "rerun:target/rerun.txt",
-                "json:target/cucumber.json",
-
+                "json:target/cucumber2.json",
+                "timeline:target/timeline-report"
         },
         features = {
-                "src/test/resources/features/activities"
+                "src/test/resources/features/fleet"
         },
         glue = "com/vytrack/step_definitions",
-        tags = "@calender_events",
+        tags = "@negative-login",
         publish = true
 )
 
-public class CucumberRunner {
+public class CucumberRunner2 {
 
         //tags = "@s_o and @with_two_columns",
         // scenario must have BOTH tags

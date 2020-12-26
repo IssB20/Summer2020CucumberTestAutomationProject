@@ -13,7 +13,7 @@ public class LoginStepDefinitions {
 
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
-        Driver.getDriver().get("http://qa1.vytrack.com");
+        Driver.getDriver().get("http://qa2.vytrack.com");
     }
 
     @When("user logs in")

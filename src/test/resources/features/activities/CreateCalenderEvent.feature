@@ -2,6 +2,7 @@
 @calender_events
 Feature: As user, I want to be able to create calendar events
 
+
   Scenario: Create calendar event with default time
     Given user is on the login page
     And user logs in as a "store manager"
